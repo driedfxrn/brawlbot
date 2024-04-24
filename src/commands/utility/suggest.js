@@ -1,4 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js')
+const { SUGGESTION_CHANNEL_ID } = require('../../constants/channels')
+const { SUGGESTION_EMBED } = require('../../constants/embeds')
 
 module.exports = {
     cooldown: 60,
@@ -13,13 +15,12 @@ module.exports = {
         ),
 
     async execute(interaction) {
-        // Color Code: #fffc04
         const member = await interaction.guild.members.fetch(interaction.user.id);
         const option = interaction.options.getString('content');
-        const channel = await interaction.guild.channels.fetch('1170896501443145820');
+        const channel = await interaction.guild.channels.fetch(SUGGESTION_CHANNEL_ID);
 
         const embed = new EmbedBuilder()
-            .setColor('#FFFC04')
+            .setColor(SUGGESTION_EMBED.EMBED_COLOR)
             .setAuthor({ name: `${member.user.username}`, iconURL: `${member.displayAvatarURL()}`})
             .setDescription(option)
             .setFooter({ text: '🔼 Like it! | 🔽 Don\'t like it! | 🔶 Already Done | ❌ Won\'t be done | ✅ Will Be Done'});
