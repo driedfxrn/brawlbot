@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/deploy-commands.js",
-    "run": "node src/index.js"
+    "dev": "node src/index.js"
   },
   "keywords": [
     "discord",
