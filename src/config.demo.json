@@ -1,0 +1,5 @@
+{ 
+    "token": "Bot Token Here",
+    "clientId": "applicationIDHere",
+    "guildId": "mainGuildIDHere"
+}

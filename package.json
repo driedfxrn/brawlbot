@@ -1,0 +1,20 @@
+{
+  "name": "bots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node deploy-commands.js",
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sapphire/framework": "^5.0.10",
+    "cleverbot-free": "^2.0.2",
+    "discord.js": "^14.14.1",
+    "puppeteer": "^22.6.5",
+    "undici": "^6.13.0"
+  }
+}
