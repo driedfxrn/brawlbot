@@ -36,12 +36,6 @@ module.exports = {
 		setTimeout(() => timestamps.delete(interaction.user.id), cooldownAmount);
 
 		try {
-			// ...
-		} catch (error) {
-			// ...
-		}
-
-		try {
 			await command.execute(interaction);
 		} catch (error) {
 			console.error(error);
