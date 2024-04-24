@@ -5,6 +5,7 @@ module.exports = {
         .setName('ping')
         .setDescription('Replies with latency.'),
     async execute(interaction) {
-        await interaction.reply({ content: `**${Date.now() - message.createdTimestamp}**ms.`, ephemeral: true})
+        const sent = await interaction.reply({ content: 'Pinging...', fetchReply: true });
+        await interaction.editReply(`Ping Time: **${sent.createdTimestamp - interaction.createdTimestamp}**ms`);
     }
 }
