@@ -6,6 +6,6 @@ module.exports = {
         .setDescription('Replies with latency.'),
     async execute(interaction) {
         const sent = await interaction.reply({ content: 'Pinging...', fetchReply: true });
-        await interaction.editReply(`Ping Time: **${sent.createdTimestamp - interaction.createdTimestamp}**ms`);
+        await interaction.editReply(`Ping Time: **${sent.createdTimestamp - interaction.createdTimestamp}**ms`);    
     }
 }
