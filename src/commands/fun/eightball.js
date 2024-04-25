@@ -1,4 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js')
+const { COMMANDS_CHANNEL_ID } = require('../../constants/channels')
+
 const choices = [
     'Maybe.', 'Certainly not.', 'I hope so.', 'Not in your wildest dreams.',
     'There is a good chance.', 'Quite likely.', 'I think so.', 'I hope not.',
@@ -6,7 +8,7 @@ const choices = [
     'Sorry, bucko.', 'Hell, yes.', 'Hell to the no.', 'The future is bleak.',
     'The future is uncertain.', 'I would rather not say.', 'Who cares?',
     'Possibly.', 'Never, ever, ever.', 'There is a small chance.', 'Yes!'
-]
+];
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -18,13 +20,12 @@ module.exports = {
         ),
 
     async execute(interaction) {
-        if(interaction.channelId !== '1232711204192124929') {
-            await interaction.reply({ content: 'You can only use this in bot commands channel.', ephemeral: true});
-            return;
+        if(interaction.channelId !== COMMANDS_CHANNEL_ID) {
+            return await interaction.reply({ content: 'You can only use this in bot commands channel.', ephemeral: true});
         }
 
-        const reply = choices[Math.floor(Math.random() * choices.length)]
+        const reply = choices[Math.floor(Math.random() * choices.length)];
 
-        await interaction.reply({ content: `The answer to \`${interaction.options.getString('content')}\` is **${reply}**`, ephemeral: true})
+        await interaction.reply({ content: `The answer to \`${interaction.options.getString('content')}\` is **${reply}**`, ephemeral: true});
     }
 }
