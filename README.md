@@ -4,8 +4,8 @@ This bot is for brawlbattle's discord server! It's made by driedfxrn his admin. 
 
 ## Current Features
 
-- Suggest Command
-- Ping Command
+-   Suggest Command
+-   Ping Command
 
 ## Installation
 
@@ -24,10 +24,10 @@ Once you have all the dependencies installed, you will need to create a file ins
 > Here is the template of the `config.json` in case you can't see the `config.demo.json` file.
 >
 > ```json
-> { 
->    "token": "Bot Token Here",
->    "clientId": "applicationIDHere",
->    "guildId": "mainGuildIDHere"
+> {
+>     "token": "Bot Token Here",
+>     "clientId": "applicationIDHere",
+>     "guildId": "mainGuildIDHere"
 > }
 > ```
 
