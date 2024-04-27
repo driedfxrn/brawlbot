@@ -1,25 +1,37 @@
 {
-  "name": "bots",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/deploy-commands.js",
-    "dev": "node src/index.js"
-  },
-  "keywords": [
-    "discord",
-    "discord-bot",
-    "bot-development",
-    "discord-js"
-  ],
-  "author": "driedfxrn",
-  "license": "MIT",
-  "dependencies": {
-    "@sapphire/framework": "^5.0.10",
-    "cleverbot-free": "^2.0.2",
-    "discord.js": "^14.14.1",
-    "puppeteer": "^22.6.5",
-    "undici": "^6.13.0"
-  }
+    "name": "bots",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/deploy-commands.js",
+        "dev": "node src/index.js"
+    },
+    "keywords": [
+        "discord",
+        "discord-bot",
+        "bot-development",
+        "discord-js"
+    ],
+    "author": "driedfxrn",
+    "license": "MIT",
+    "dependencies": {
+        "@sapphire/framework": "^5.0.10",
+        "cleverbot-free": "^2.0.2",
+        "discord.js": "^14.14.1",
+        "puppeteer": "^22.6.5",
+        "undici": "^6.13.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.0.2",
+        "@eslint/js": "^9.1.1",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-config-standard": "^17.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "globals": "^15.0.0",
+        "prettier": "3.2.5"
+    }
 }
